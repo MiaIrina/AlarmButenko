@@ -1,0 +1,15 @@
+C:\Users\Iryna Butenko\source\repos\AlarmProjectButenko\AlarmEntityFramework\obj\Debug\AlarmEntityFramework.csprojAssemblyReference.cache
+C:\Users\Iryna Butenko\source\repos\AlarmProjectButenko\AlarmEntityFramework\obj\Debug\AlarmEntityFramework.csproj.CoreCompileInputs.cache
+C:\Users\Iryna Butenko\source\repos\AlarmProjectButenko\AlarmEntityFramework\bin\Debug\AlarmEntityFramework.exe.config
+C:\Users\Iryna Butenko\source\repos\AlarmProjectButenko\AlarmEntityFramework\bin\Debug\AlarmEntityFramework.exe
+C:\Users\Iryna Butenko\source\repos\AlarmProjectButenko\AlarmEntityFramework\bin\Debug\AlarmEntityFramework.pdb
+C:\Users\Iryna Butenko\source\repos\AlarmProjectButenko\AlarmEntityFramework\bin\Debug\AlarmProjectButenko.dll
+C:\Users\Iryna Butenko\source\repos\AlarmProjectButenko\AlarmEntityFramework\bin\Debug\EntityFramework.dll
+C:\Users\Iryna Butenko\source\repos\AlarmProjectButenko\AlarmEntityFramework\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\Iryna Butenko\source\repos\AlarmProjectButenko\AlarmEntityFramework\bin\Debug\AlarmProjectButenko.pdb
+C:\Users\Iryna Butenko\source\repos\AlarmProjectButenko\AlarmEntityFramework\bin\Debug\AlarmProjectButenko.dll.config
+C:\Users\Iryna Butenko\source\repos\AlarmProjectButenko\AlarmEntityFramework\bin\Debug\EntityFramework.xml
+C:\Users\Iryna Butenko\source\repos\AlarmProjectButenko\AlarmEntityFramework\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\Iryna Butenko\source\repos\AlarmProjectButenko\AlarmEntityFramework\obj\Debug\AlarmEntityFramework.csproj.CopyComplete
+C:\Users\Iryna Butenko\source\repos\AlarmProjectButenko\AlarmEntityFramework\obj\Debug\AlarmEntityFramework.exe
+C:\Users\Iryna Butenko\source\repos\AlarmProjectButenko\AlarmEntityFramework\obj\Debug\AlarmEntityFramework.pdb
