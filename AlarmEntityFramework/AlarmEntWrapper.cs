@@ -1,4 +1,5 @@
 ﻿using AlarmProjectButenko.Models;
+using Models;
 using System;
 using System.Collections.Generic;
 using System.Data.Entity;
@@ -38,22 +39,47 @@ namespace AlarmEntityFramework
                 context.SaveChanges();
             }
         }
-        public static void AddUser(User user)
+        public static void AddAlarm(Alarm alarm)
         {
             using (var context = new AlarmDBContext())
             {
-                context.Users.Add(user);
+                alarm.deleteDBValues();
+                context.Alarms.Add(alarm);
                 context.SaveChanges();
             }
         }
-    }
-    
+        public static void SaveAlarm(Alarm alarm)
+        {
+            using (var context = new AlarmDBContext())
+            {
+                context.Entry(alarm).State = EntityState.Modified;
+                context.SaveChanges();
+            }
+        }
 
-}
-public static void Main()
+        public static void DeleteAlarm(Alarm alarm)
+        {
+            using (var context = new AlarmDBContext())
+            {
+                alarm.deleteDBValues();
+                context.Alarms.Attach(alarm);
+                context.Alarms.Remove(alarm);
+                context.SaveChanges();
+            }
+        }
+        public static IEnumerable<Alarm> GetAlarms(Guid guid)
+        {
+            using (var context = new AlarmDBContext())
+            {
+                return context.Alarms.Where(r => r.OwnerGuid == guid).ToList();
+            }
+        }
+
+        public static void Main()
         {
 
         }
+}
 
     }
-}
+

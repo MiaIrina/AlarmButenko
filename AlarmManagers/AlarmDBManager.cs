@@ -1,5 +1,6 @@
 ﻿using AlarmEntityFramework;
 using AlarmProjectButenko.Models;
+using Models;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -26,7 +27,7 @@ namespace AlarmManagers
             AlarmEntWrapper.AddUser(user);
         }
 
-        internal static User CheckCachedUser(User user)
+        internal static User CheckUser(User user)
         {
             var userInDB = AlarmEntWrapper.UserByGuid(user.Guid);
             if (userInDB!= null && userInDB.CheckPassword(user))
