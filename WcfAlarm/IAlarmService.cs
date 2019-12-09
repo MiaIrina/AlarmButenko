@@ -23,7 +23,6 @@ namespace WcfAlarm
         void DeleteAlarm(Alarm alarm);
         [OperationContract]
         User GetUser(string login);
-
         [OperationContract]
         IEnumerable<Alarm> GetAlarms(User user);
 

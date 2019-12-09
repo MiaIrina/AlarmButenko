@@ -88,28 +88,29 @@ namespace Client.ViewModels
             LoaderManager.Instance.ShowLoader();
             bool result = await Task.Run(() =>
             {
-
+                try {
                 Checker.CheckName(Name);
                 Checker.CheckSurname(Surname);
                 Checker.CheckLogin(Login);
-                
                 Checker.CheckEmail(Email);
-                
-          
-                //var user = new User(Name, Surname, Email, Login, Password);
-                //if (!ServiceClient.Instance.AddUser(user))
-                //{
-                //    MessageBox.Show("New user mast have unique login and email.");
-                //    return false;
-                //}
+                //!!!
+                 }
+                catch (Exception e)
+                {
+                    MessageBox.Show(e.Message);
+                    return false;
+                }
+
                 return true;
             });
             LoaderManager.Instance.HideLoader();
-            if (!result)
-                return;
-            var user = new User(Name, Surname, Email, Login, Password);
-           // ServiceClient.Instance.AddUser(user);
-           // UserManager.CurrentUser = user;
+            if (result)
+            {   
+                var usertoAdd = new User(Name, Surname, Login, Email, Password);
+                AlarmClient.Client.AddUser(usertoAdd);
+                StationManager.Current = usertoAdd;
+            } return;
+           
             //NavigationManager.Instance.Navigate(ViewType.ShowRequests);
         }
 

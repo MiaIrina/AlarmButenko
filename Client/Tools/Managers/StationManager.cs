@@ -6,6 +6,6 @@ namespace Client.Tools.Managers
 {
     internal static class StationManager
     {
-        internal static User CurrentUser { get; set; }
+        internal static User Current { get; set; }
     }
 }

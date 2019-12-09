@@ -40,11 +40,11 @@ namespace Client
         }
         internal void AddUser(User user)
         {
-        if (ClientOfAlarm.UserExistsInDB(user.Login))
-            {
-                throw new UserExistsException();
-            }
             ClientOfAlarm.AddUser(user);
+        }
+        internal bool UserExistsInDB(User user)
+        {
+            return ClientOfAlarm.UserExistsInDB(user);
         }
 
         internal void AddAlarm(Alarm alarm)

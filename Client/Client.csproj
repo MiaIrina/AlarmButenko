@@ -37,6 +37,8 @@
   <ItemGroup>
     <Reference Include="System" />
     <Reference Include="System.Data" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.ServiceModel" />
     <Reference Include="System.Xml" />
     <Reference Include="Microsoft.CSharp" />
     <Reference Include="System.Core" />
@@ -55,8 +57,10 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="AlarmClient.cs" />
     <Compile Include="Tools\BaseViewModel.cs" />
     <Compile Include="Tools\Checker.cs" />
+    <Compile Include="Tools\Exceptions\UserExistsException.cs" />
     <Compile Include="Tools\Exceptions\WrongLoginException.cs" />
     <Compile Include="Tools\Exceptions\WrongMailException.cs" />
     <Compile Include="Tools\Exceptions\WrongNameException.cs" />
@@ -134,6 +138,8 @@
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
+    <None Include="Properties\DataSources\Models.Alarm.datasource" />
+    <None Include="Properties\DataSources\Models.User.datasource" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -155,6 +161,5 @@
       <Name>WcfAlarm</Name>
     </ProjectReference>
   </ItemGroup>
-  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
