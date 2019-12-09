@@ -46,7 +46,10 @@ namespace Client
         {
             ClientOfAlarm.AddAlarm(alarm);
         }
-
+        internal void DeleteAlarm(Alarm alarm)
+        {
+            ClientOfAlarm.DeleteAlarm(alarm);
+        }
         internal IEnumerable<Alarm> GetAlarms (User user)
         {
             return ClientOfAlarm.GetAlarms(user);
