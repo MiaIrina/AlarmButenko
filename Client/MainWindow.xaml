@@ -4,9 +4,11 @@
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Client"
+        xmlns:fa="http://schemas.fontawesome.io/icons/"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
-    <Grid>
-        
+        Title="AlarmApp" Height="300" Width="500">
+    <Grid Background="Cornsilk">
+        <ContentControl Name="_contentControl" IsEnabled="{Binding Path=IsControlEnabled, Mode=OneWay, UpdateSourceTrigger=PropertyChanged}"/>
+        <fa:ImageAwesome Name="ImageAwesome"  Icon="Spinner" Width="80" Height="80" HorizontalAlignment="Center" VerticalAlignment="Center" Spin="True" Visibility="{Binding Path=LoaderVisibility, Mode=OneWay, UpdateSourceTrigger=PropertyChanged}"/>
     </Grid>
 </Window>

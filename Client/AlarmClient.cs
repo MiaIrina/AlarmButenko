@@ -1,12 +1,10 @@
 ﻿
 
-using Client.Tools.Exceptions;
+using Client.ServiceAlarm;
+
 using Models;
-using System;
+
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Client
 {
@@ -29,11 +27,11 @@ namespace Client
             }
         }
 
-        private static AlarmServiceClient ClientOfAlarm { get; set; }
+        private static AlarmServiceClient ClientOfAlarm  { get; set; }
 
         private AlarmClient()
         {
-            ClientOfAlarm = new ServiceClient();
+            ClientOfAlarm = new AlarmServiceClient();
         }
       internal void CloseCon()
         {

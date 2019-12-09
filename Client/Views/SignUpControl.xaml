@@ -4,6 +4,7 @@
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
              xmlns:local="clr-namespace:Client.Views"
+               xmlns:pass="clr-namespace:Client.Tools"
              mc:Ignorable="d" 
              d:DesignHeight="300" d:DesignWidth="400">
     <Grid>
@@ -34,7 +35,9 @@
         <TextBox Grid.Row="3"  Name="_surnameOfUser" Width="200" Grid.ColumnSpan="2"  Text="{Binding Surname, Mode=TwoWay ,UpdateSourceTrigger=PropertyChanged}"></TextBox>
         <TextBox Grid.Row="5"  Name="_loginOfUser" Width="200" Grid.ColumnSpan="2"  Text="{Binding Login, Mode=TwoWay,UpdateSourceTrigger=PropertyChanged}" ></TextBox>
         <TextBox Grid.Row="7"  Name="_emailOfUser" Width="200" Grid.ColumnSpan="2"  Text="{Binding Password, Mode=TwoWay ,UpdateSourceTrigger=PropertyChanged}"></TextBox>
-        <TextBox Grid.Row="9" Name="_passwordOfUser" Grid.ColumnSpan="2"  Width="200" Text="{Binding Name, Mode=TwoWay,UpdateSourceTrigger=PropertyChanged}" ></TextBox>
+        <PasswordBox Grid.Row="9"  Grid.ColumnSpan="2"  VerticalAlignment="Center" HorizontalAlignment="Stretch"
+                     Height="20" Margin="5" pass:PasswordBoxAssistant.BindPassword="True" 
+                    pass:PasswordBoxAssistant.BoundPassword="{Binding Password, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"></PasswordBox>
         <Button Content="Sign up" Grid.Row="10"  Grid.ColumnSpan="2" Width="50"   Margin="10" Height="20" Command="{Binding BeginCommand}"></Button>
         <Button Content="Back to menu" Grid.Row="11"  Grid.Column="0"  Width="150"   Height="20" Command="{Binding ReturnCommand}"></Button>
         <Button Content="Exit" Grid.Row="11"  Grid.Column="1"  Width="150"   Height="20" Command="{Binding ExitCommand}"></Button>

@@ -35,6 +35,9 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="FontAwesome.WPF, Version=4.7.0.37774, Culture=neutral, PublicKeyToken=0758b07a11a4f466, processorArchitecture=MSIL">
+      <HintPath>..\packages\FontAwesome.WPF.4.7.0.9\lib\net40\FontAwesome.WPF.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Data" />
     <Reference Include="System.Runtime.Serialization" />
@@ -58,6 +61,11 @@
       <SubType>Designer</SubType>
     </ApplicationDefinition>
     <Compile Include="AlarmClient.cs" />
+    <Compile Include="Connected Services\ServiceAlarm\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
     <Compile Include="Tools\BaseViewModel.cs" />
     <Compile Include="Tools\Checker.cs" />
     <Compile Include="Tools\Exceptions\UserExistsException.cs" />
@@ -138,6 +146,17 @@
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
+    <None Include="Connected Services\ServiceAlarm\AlarmService.wsdl" />
+    <None Include="Connected Services\ServiceAlarm\AlarmService.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\ServiceAlarm\AlarmService1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\ServiceAlarm\AlarmService2.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="packages.config" />
     <None Include="Properties\DataSources\Models.Alarm.datasource" />
     <None Include="Properties\DataSources\Models.User.datasource" />
     <None Include="Properties\Settings.settings">
@@ -160,6 +179,24 @@
       <Project>{fefc1bac-93d0-4882-8ada-e64901ee115a}</Project>
       <Name>WcfAlarm</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadataStorage Include="Connected Services\ServiceAlarm\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Connected Services\ServiceAlarm\AlarmService.disco" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Connected Services\ServiceAlarm\configuration91.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Connected Services\ServiceAlarm\configuration.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Connected Services\ServiceAlarm\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

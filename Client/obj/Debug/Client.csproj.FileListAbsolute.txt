@@ -33,3 +33,6 @@ C:\Users\Iryna Butenko\source\repos\AlarmProjectButenko\Client\obj\Debug\Client.
 C:\Users\Iryna Butenko\source\repos\AlarmProjectButenko\Client\obj\Debug\Client.csproj.CopyComplete
 C:\Users\Iryna Butenko\source\repos\AlarmProjectButenko\Client\obj\Debug\Client.exe
 C:\Users\Iryna Butenko\source\repos\AlarmProjectButenko\Client\obj\Debug\Client.pdb
+C:\Users\Iryna Butenko\source\repos\AlarmProjectButenko\Client\obj\Debug\GeneratedInternalTypeHelper.g.cs
+C:\Users\Iryna Butenko\source\repos\AlarmProjectButenko\Client\bin\Debug\FontAwesome.WPF.dll
+C:\Users\Iryna Butenko\source\repos\AlarmProjectButenko\Client\bin\Debug\FontAwesome.WPF.xml

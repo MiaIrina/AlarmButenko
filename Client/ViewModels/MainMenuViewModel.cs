@@ -6,7 +6,7 @@ using System;
 
 namespace Client.ViewModels
 {
-    class MainMenuViewModelBaseViewModel
+    class MainMenuViewModel:BaseViewModel
     {
 
         #region
@@ -22,14 +22,14 @@ namespace Client.ViewModels
                 return _exitCommand ?? (_exitCommand = new RelayCommand<object>(o => Environment.Exit(0)));
             }
         }
-        public RelayCommand<Object> AddUserCommand
+        public RelayCommand<Object> SignUpCommand
         {
             get
             {
                 return _signUpCommand ?? (_signUpCommand = new RelayCommand<object>(o => NavigationManager.Instance.Navigate(ViewType.SignUp)));
             }
         }
-        public RelayCommand<Object> UsersListCommand
+        public RelayCommand<Object> SignInCommand
         {
             get
             {
