@@ -90,13 +90,12 @@ namespace Client.ViewModels
             {
 
                 Checker.CheckName(Name);
-
+                Checker.CheckSurname(Surname);
+                Checker.CheckLogin(Login);
+                
+                Checker.CheckEmail(Email);
+                
           
-                if (Password.Length < 6)
-                {
-                    MessageBox.Show("Password must be at list 6 characters long");
-                    return false;
-                }
                 //var user = new User(Name, Surname, Email, Login, Password);
                 //if (!ServiceClient.Instance.AddUser(user))
                 //{
@@ -106,12 +105,12 @@ namespace Client.ViewModels
                 return true;
             });
             LoaderManager.Instance.HideLoader();
-            if (!signedUp)
+            if (!result)
                 return;
             var user = new User(Name, Surname, Email, Login, Password);
-            ServiceClient.Instance.AddUser(user);
-            UserManager.CurrentUser = user;
-            NavigationManager.Instance.Navigate(ViewType.ShowRequests);
+           // ServiceClient.Instance.AddUser(user);
+           // UserManager.CurrentUser = user;
+            //NavigationManager.Instance.Navigate(ViewType.ShowRequests);
         }
 
        

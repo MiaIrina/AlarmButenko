@@ -46,6 +46,7 @@
     <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
       <HintPath>..\packages\EntityFramework.6.4.0\lib\net45\EntityFramework.SqlServer.dll</HintPath>
     </Reference>
+    <Reference Include="System" />
     <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System.Configuration" />
   </ItemGroup>
@@ -54,11 +55,12 @@
     <Compile Include="AlarmEntWrapper.cs" />
     <Compile Include="Configurations\AlarmConfiguration.cs" />
     <Compile Include="Configurations\UserConfiguration.cs" />
+    <Compile Include="Migrations\Configuration.cs" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\AlarmProjectButenko\AlarmProjectButenko.csproj">
-      <Project>{70DDBA0B-4983-4033-B81D-91AB675232EF}</Project>
-      <Name>AlarmProjectButenko</Name>
+    <ProjectReference Include="..\Models\Models.csproj">
+      <Project>{624D4403-945E-45DC-ABD6-E20809B89D48}</Project>
+      <Name>Models</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

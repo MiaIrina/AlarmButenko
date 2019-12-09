@@ -60,6 +60,7 @@
     <Compile Include="Tools\Exceptions\WrongLoginException.cs" />
     <Compile Include="Tools\Exceptions\WrongMailException.cs" />
     <Compile Include="Tools\Exceptions\WrongNameException.cs" />
+    <Compile Include="Tools\Exceptions\WrongSurnameException.cs" />
     <Compile Include="Tools\ILoaderOwner.cs" />
     <Compile Include="Tools\Managers\LoaderManager.cs" />
     <Compile Include="Tools\Managers\NavigationManager.cs" />
@@ -71,11 +72,20 @@
     <Compile Include="Tools\Navigation\InitializationNavigationModel.cs" />
     <Compile Include="Tools\PasswordBoxAssistant.cs" />
     <Compile Include="Tools\RelayCommand.cs" />
+    <Compile Include="ViewModels\MainMenuViewModel.cs" />
+    <Compile Include="ViewModels\MainViewModel.cs" />
+    <Compile Include="ViewModels\SignUpViewModel.cs" />
     <Compile Include="Views\LoginControl.xaml.cs">
       <DependentUpon>LoginControl.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Views\MainMenuControl.xaml.cs">
+      <DependentUpon>MainMenuControl.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Views\SignUpControl.xaml.cs">
       <DependentUpon>SignUpControl.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\UserProfileControl.xaml.cs">
+      <DependentUpon>UserProfileControl.xaml</DependentUpon>
     </Compile>
     <Page Include="MainWindow.xaml">
       <Generator>MSBuild:Compile</Generator>
@@ -93,7 +103,15 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="Views\MainMenuControl.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="Views\SignUpControl.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\UserProfileControl.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -128,10 +146,15 @@
     <WCFMetadata Include="Connected Services\" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\AlarmProjectButenko\AlarmProjectButenko.csproj">
-      <Project>{70DDBA0B-4983-4033-B81D-91AB675232EF}</Project>
-      <Name>AlarmProjectButenko</Name>
+    <ProjectReference Include="..\Models\Models.csproj">
+      <Project>{624D4403-945E-45DC-ABD6-E20809B89D48}</Project>
+      <Name>Models</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\WcfAlarm\WcfAlarm.csproj">
+      <Project>{fefc1bac-93d0-4882-8ada-e64901ee115a}</Project>
+      <Name>WcfAlarm</Name>
     </ProjectReference>
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

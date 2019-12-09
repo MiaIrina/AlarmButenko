@@ -1,1 +1,1 @@
-﻿<%@ ServiceHost Language="C#" Debug="true" Service="WcfAlarm.Service1" CodeBehind="AlarmService.svc.cs" %>
+﻿<%@ ServiceHost Language="C#" Debug="true" Service="WcfAlarm.AlarmService" CodeBehind="AlarmService.svc.cs" %>

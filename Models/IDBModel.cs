@@ -6,7 +6,8 @@ using System.Threading.Tasks;
 
 namespace Models
 {
-    interface IDBModel
+    public interface IDBModel
     {
+        Guid Guid { get; }
     }
 }

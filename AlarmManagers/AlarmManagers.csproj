@@ -35,5 +35,22 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AlarmDBManager.cs" />
+    <Compile Include="FileFolderHelper.cs" />
+    <Compile Include="SerializationManager.cs" />
+    <Compile Include="StationManager.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\AlarmEntityFramework\AlarmEntityFramework.csproj">
+      <Project>{6BD11A67-0FED-4C33-B0FD-1D1497798F7D}</Project>
+      <Name>AlarmEntityFramework</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Models\Models.csproj">
+      <Project>{624D4403-945E-45DC-ABD6-E20809B89D48}</Project>
+      <Name>Models</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

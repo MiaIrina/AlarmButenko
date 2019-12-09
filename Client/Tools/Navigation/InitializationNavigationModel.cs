@@ -21,9 +21,9 @@ namespace Client.Tools.Navigation
 
 
 
-               /*case ViewType.Main:
+               case ViewType.Main:
                     ViewsDictionary.Add(viewType, new MainMenuControl());
-                    break;*/
+                    break;
                 case ViewType.SignUp:
                     ViewsDictionary.Add(viewType, new SignUpControl());
                     break;
@@ -31,7 +31,7 @@ namespace Client.Tools.Navigation
                     ViewsDictionary.Add(viewType, new LoginControl());
                     break;
                 case ViewType.Alarms:
-                    ViewsDictionary.Add(viewType, new LoginControl());
+                    ViewsDictionary.Add(viewType, new UserProfileControl());
                     break;
                 case ViewType.CreateAlarm:
                     ViewsDictionary.Add(viewType, new LoginControl());

@@ -13,7 +13,7 @@ namespace Client.Tools.Exceptions
 
         }
         public WrongNameException(string name)
-            : base($"Wrong format of name or surname {name}")
+            : base($"Wrong format of name {name}")
         {
 
         }

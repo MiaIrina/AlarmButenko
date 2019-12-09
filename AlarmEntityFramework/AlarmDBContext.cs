@@ -1,5 +1,7 @@
 ﻿using AlarmEntityFramework.Configurations;
-using AlarmProjectButenko.Models;
+using AlarmEntityFramework.Migrations;
+
+using Models;
 using System;
 using System.Collections.Generic;
 

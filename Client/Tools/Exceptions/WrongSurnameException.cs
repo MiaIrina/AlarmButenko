@@ -6,7 +6,16 @@ using System.Threading.Tasks;
 
 namespace Client.Tools.Exceptions
 {
-    class WrongSurnameException
+    internal class WrongSurnameException : FormatException
     {
+        public WrongSurnameException() : base()
+        {
+
+        }
+        public WrongSurnameException(string name)
+            : base($"Wrong format of surname {name}")
+        {
+
+        }
     }
 }

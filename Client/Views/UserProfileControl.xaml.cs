@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Client.Tools.Navigation;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -18,7 +19,7 @@ namespace Client.Views
     /// <summary>
     /// Логика взаимодействия для UserProfileControl.xaml
     /// </summary>
-    public partial class UserProfileControl : UserControl
+    public partial class UserProfileControl : UserControl,INavigatable
     {
         public UserProfileControl()
         {

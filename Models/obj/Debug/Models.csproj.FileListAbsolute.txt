@@ -1,0 +1,7 @@
+C:\Users\Iryna Butenko\source\repos\AlarmProjectButenko\Models\obj\Debug\Models.csprojAssemblyReference.cache
+C:\Users\Iryna Butenko\source\repos\AlarmProjectButenko\Models\obj\Debug\Models.csproj.CoreCompileInputs.cache
+C:\Users\Iryna Butenko\source\repos\AlarmProjectButenko\Models\bin\Debug\Models.exe.config
+C:\Users\Iryna Butenko\source\repos\AlarmProjectButenko\Models\bin\Debug\Models.exe
+C:\Users\Iryna Butenko\source\repos\AlarmProjectButenko\Models\bin\Debug\Models.pdb
+C:\Users\Iryna Butenko\source\repos\AlarmProjectButenko\Models\obj\Debug\Models.exe
+C:\Users\Iryna Butenko\source\repos\AlarmProjectButenko\Models\obj\Debug\Models.pdb
