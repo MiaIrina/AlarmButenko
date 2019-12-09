@@ -31,7 +31,7 @@ namespace Client.Tools.Navigation
                     ViewsDictionary.Add(viewType, new LoginControl());
                     break;
                 case ViewType.Alarms:
-                    ViewsDictionary.Add(viewType, new UserProfileControl());
+                    ViewsDictionary.Add(viewType, new AlarmsControl());
                     break;
                 case ViewType.CreateAlarm:
                     ViewsDictionary.Add(viewType, new LoginControl());

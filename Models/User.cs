@@ -138,7 +138,7 @@ namespace Models
         }
 
 
-        internal bool CheckPassword(string password)
+        public  bool CheckPassword(string password)
         {
             try
             {

@@ -3,7 +3,6 @@ C:\Users\Iryna Butenko\source\repos\AlarmProjectButenko\Client\obj\Debug\MainWin
 C:\Users\Iryna Butenko\source\repos\AlarmProjectButenko\Client\obj\Debug\Views\LoginControl.g.cs
 C:\Users\Iryna Butenko\source\repos\AlarmProjectButenko\Client\obj\Debug\Views\MainMenuControl.g.cs
 C:\Users\Iryna Butenko\source\repos\AlarmProjectButenko\Client\obj\Debug\Views\SignUpControl.g.cs
-C:\Users\Iryna Butenko\source\repos\AlarmProjectButenko\Client\obj\Debug\Views\UserProfileControl.g.cs
 C:\Users\Iryna Butenko\source\repos\AlarmProjectButenko\Client\obj\Debug\App.g.cs
 C:\Users\Iryna Butenko\source\repos\AlarmProjectButenko\Client\obj\Debug\Client_MarkupCompile.cache
 C:\Users\Iryna Butenko\source\repos\AlarmProjectButenko\Client\obj\Debug\Client_MarkupCompile.lref
@@ -25,7 +24,6 @@ C:\Users\Iryna Butenko\source\repos\AlarmProjectButenko\Client\obj\Debug\MainWin
 C:\Users\Iryna Butenko\source\repos\AlarmProjectButenko\Client\obj\Debug\Views\LoginControl.baml
 C:\Users\Iryna Butenko\source\repos\AlarmProjectButenko\Client\obj\Debug\Views\MainMenuControl.baml
 C:\Users\Iryna Butenko\source\repos\AlarmProjectButenko\Client\obj\Debug\Views\SignUpControl.baml
-C:\Users\Iryna Butenko\source\repos\AlarmProjectButenko\Client\obj\Debug\Views\UserProfileControl.baml
 C:\Users\Iryna Butenko\source\repos\AlarmProjectButenko\Client\obj\Debug\Client.g.resources
 C:\Users\Iryna Butenko\source\repos\AlarmProjectButenko\Client\obj\Debug\Client.Properties.Resources.resources
 C:\Users\Iryna Butenko\source\repos\AlarmProjectButenko\Client\obj\Debug\Client.csproj.GenerateResource.cache
@@ -36,3 +34,5 @@ C:\Users\Iryna Butenko\source\repos\AlarmProjectButenko\Client\obj\Debug\Client.
 C:\Users\Iryna Butenko\source\repos\AlarmProjectButenko\Client\obj\Debug\GeneratedInternalTypeHelper.g.cs
 C:\Users\Iryna Butenko\source\repos\AlarmProjectButenko\Client\bin\Debug\FontAwesome.WPF.dll
 C:\Users\Iryna Butenko\source\repos\AlarmProjectButenko\Client\bin\Debug\FontAwesome.WPF.xml
+C:\Users\Iryna Butenko\source\repos\AlarmProjectButenko\Client\obj\Debug\Views\AlarmsControl.g.cs
+C:\Users\Iryna Butenko\source\repos\AlarmProjectButenko\Client\obj\Debug\Views\AlarmsControl.baml

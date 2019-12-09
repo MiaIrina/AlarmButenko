@@ -4,3 +4,4 @@ C:\Users\Iryna Butenko\source\repos\AlarmProjectButenko\Models\bin\Debug\Models.
 C:\Users\Iryna Butenko\source\repos\AlarmProjectButenko\Models\bin\Debug\Models.pdb
 C:\Users\Iryna Butenko\source\repos\AlarmProjectButenko\Models\obj\Debug\Models.exe
 C:\Users\Iryna Butenko\source\repos\AlarmProjectButenko\Models\obj\Debug\Models.pdb
+C:\Users\Iryna Butenko\source\repos\AlarmProjectButenko\Models\obj\Debug\Models.csprojAssemblyReference.cache

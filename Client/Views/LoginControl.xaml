@@ -4,6 +4,7 @@
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
              xmlns:local="clr-namespace:Client.Views"
+             xmlns:pass="clr-namespace:Client.Tools"
              mc:Ignorable="d" 
              d:DesignHeight="450" d:DesignWidth="800">
     <Grid>
@@ -22,10 +23,12 @@
 
         <Label Grid.Row="0" HorizontalAlignment="Center" Grid.ColumnSpan="2"  VerticalAlignment="Bottom" Content="Enter your login:"/>
         <Label Grid.Row="2" HorizontalAlignment="Center" Grid.ColumnSpan="2"  VerticalAlignment="Bottom" Content="Enter a password:"/>
-        <TextBox Grid.Row="1" Name="_login" Width="200" Grid.ColumnSpan="2" Text="{Binding Name, Mode=TwoWay,UpdateSourceTrigger=PropertyChanged}" ></TextBox>
-        <TextBox Grid.Row="3" Name="_password" Grid.ColumnSpan="2"  Width="200" Text="{Binding Name, Mode=TwoWay,UpdateSourceTrigger=PropertyChanged}" ></TextBox>
-        <Button Content="Sign in" Grid.Row="4"  Grid.ColumnSpan="2" Width="50"   Margin="10" Height="20" Command="{Binding BeginCommand}"></Button>
-        <Button Content="Back to menu" Grid.Row="5"  Grid.Column="0"  Width="150"   Height="20" Command="{Binding ReturnCommand}"></Button>
+        <TextBox Grid.Row="1" Name="_login" Width="200" Grid.ColumnSpan="2" Text="{Binding Login, Mode=TwoWay,UpdateSourceTrigger=PropertyChanged}" ></TextBox>
+        <PasswordBox Grid.Row="3"  Grid.ColumnSpan="2"  VerticalAlignment="Center" Width="200"
+                     Height="20" Margin="5" pass:PasswordBoxAssistant.BindPassword="True" 
+                    pass:PasswordBoxAssistant.BoundPassword="{Binding Password, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"></PasswordBox>
+        <Button Content="Sign in" Grid.Row="4"  Grid.ColumnSpan="2" Width="50"   Margin="10" Height="20" Command="{Binding LoginCommand}"></Button>
+        <Button Content="Back to menu" Grid.Row="5"  Grid.Column="0"  Width="150"   Height="20" Command="{Binding BackCommand}"></Button>
         <Button Content="Exit" Grid.Row="5"  Grid.Column="1"  Width="150"   Height="20" Command="{Binding ExitCommand}"></Button>
 
     </Grid>
