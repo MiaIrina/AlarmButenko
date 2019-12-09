@@ -1,5 +1,4 @@
-﻿using Client.Tools.Navigation;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -17,14 +16,13 @@ using System.Windows.Shapes;
 namespace Client.Views
 {
     /// <summary>
-    /// Логика взаимодействия для UserProfileControl.xaml
+    /// Логика взаимодействия для AlarmsControl.xaml
     /// </summary>
-    public partial class UserProfileControl : UserControl,INavigatable
+    public partial class AlarmsControl : UserControl
     {
-        public UserProfileControl()
+        public AlarmsControl()
         {
             InitializeComponent();
-            
         }
     }
 }
