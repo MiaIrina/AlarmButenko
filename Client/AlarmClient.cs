@@ -1,4 +1,5 @@
 ﻿using Client.ServiceAlarm;
+using Client.Tools.Exceptions;
 using Models;
 using System;
 using System.Collections.Generic;
@@ -39,6 +40,10 @@ namespace Client
         }
         internal void AddUser(User user)
         {
+        if (ClientOfAlarm.UserExistsInDB(user.Login))
+            {
+                throw new UserExistsException();
+            }
             ClientOfAlarm.AddUser(user);
         }
 

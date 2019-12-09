@@ -14,7 +14,7 @@ namespace WcfAlarm
     public interface IAlarmService
     {
         [OperationContract]
-        bool UserExistsInDB(string login);
+        bool UserExistsInDB(User user);
         [OperationContract]
         void AddUser(User user);
         [OperationContract]

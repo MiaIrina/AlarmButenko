@@ -9,11 +9,11 @@ namespace AlarmEntityFramework
 {
     public static class AlarmEntWrapper
     {
-        public static bool UserExistsInDB(string login)
+        public static bool UserExistsInDB(User user)
         {
             using (var context = new AlarmDBContext())
             {
-                return context.Users.Any(u => u.Login == login);
+                return context.Users.Any(u => (u.Login == user.Login)||(u.Email==user.Email));
             }
         }
         public static User UserByLogin(string login)
