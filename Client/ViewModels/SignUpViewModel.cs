@@ -15,20 +15,79 @@ namespace Client.ViewModels
     {
         #region Fields
 
+        private RelayCommand<object> _exitCommand;
         private RelayCommand<object> _backCommand;
         private RelayCommand<object> _signUpCommand;
         private Visibility _loaderVisibility = Visibility.Hidden;
         private bool _isControlEnabled = true;
-
+        private string _name;
+        private string _email;
+        private string _surname;
+        private string _login;
+        private string _password;
         #endregion
         #region Properties
 
-
-        public string Name { get; set; }
-        public string Surname { get; set; }
-        public string Email { get; set; }
-        public string Login { get; set; }
-        public string Password { get; set; }
+        public String Email
+        {
+            get
+            {
+                return _email;
+            }
+            set
+            {
+                _email = value;
+                OnPropertyChanged();
+            }
+        }
+        public String Name
+        {
+            get
+            {
+                return _name;
+            }
+            set
+            {
+                _name = value;
+                OnPropertyChanged();
+            }
+        }
+        public String Surname
+        {
+            get
+            {
+                return _surname;
+            }
+            set
+            {
+                _surname = value;
+                OnPropertyChanged();
+            }
+        }
+        public String Login
+        {
+            get
+            {
+                return _login;
+            }
+            set
+            {
+                _login = value;
+                OnPropertyChanged();
+            }
+        }
+        public String Password
+        {
+            get
+            {
+                return _password;
+            }
+            set
+            {
+                _password = value;
+                OnPropertyChanged();
+            }
+        }
 
         public RelayCommand<Object> BackCommand
         {
@@ -111,7 +170,9 @@ namespace Client.ViewModels
                 {
                     AlarmClient.Client.AddUser(usertoAdd);
                     StationManager.Current = usertoAdd;
+                    MessageBox.Show($"Welcome {Name} !");
                     NavigationManager.Instance.Navigate(ViewType.Alarms);
+                    
                 }
                 else MessageBox.Show("This user is already exists!");
                 
@@ -121,7 +182,13 @@ namespace Client.ViewModels
             
         }
 
-       
+        public RelayCommand<Object> ExitCommand
+        {
+            get
+            {
+                return _exitCommand ?? (_exitCommand = new RelayCommand<object>(o => Environment.Exit(0)));
+            }
+        }
 
-    }
+        }
 }

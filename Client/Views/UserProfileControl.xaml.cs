@@ -24,6 +24,7 @@ namespace Client.Views
         public UserProfileControl()
         {
             InitializeComponent();
+            
         }
     }
 }

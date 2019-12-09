@@ -34,12 +34,12 @@
         <TextBox Grid.Row="1" Name="_nameOfUser" Width="200" Grid.ColumnSpan="2" Text="{Binding Name, Mode=TwoWay,UpdateSourceTrigger=PropertyChanged}" ></TextBox>
         <TextBox Grid.Row="3"  Name="_surnameOfUser" Width="200" Grid.ColumnSpan="2"  Text="{Binding Surname, Mode=TwoWay ,UpdateSourceTrigger=PropertyChanged}"></TextBox>
         <TextBox Grid.Row="5"  Name="_loginOfUser" Width="200" Grid.ColumnSpan="2"  Text="{Binding Login, Mode=TwoWay,UpdateSourceTrigger=PropertyChanged}" ></TextBox>
-        <TextBox Grid.Row="7"  Name="_emailOfUser" Width="200" Grid.ColumnSpan="2"  Text="{Binding Password, Mode=TwoWay ,UpdateSourceTrigger=PropertyChanged}"></TextBox>
+        <TextBox Grid.Row="7"  Name="_emailOfUser" Width="200" Grid.ColumnSpan="2"  Text="{Binding Email, Mode=TwoWay ,UpdateSourceTrigger=PropertyChanged}"></TextBox>
         <PasswordBox Grid.Row="9"  Grid.ColumnSpan="2"  VerticalAlignment="Center" HorizontalAlignment="Stretch"
                      Height="20" Margin="5" pass:PasswordBoxAssistant.BindPassword="True" 
                     pass:PasswordBoxAssistant.BoundPassword="{Binding Password, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"></PasswordBox>
-        <Button Content="Sign up" Grid.Row="10"  Grid.ColumnSpan="2" Width="50"   Margin="10" Height="20" Command="{Binding BeginCommand}"></Button>
-        <Button Content="Back to menu" Grid.Row="11"  Grid.Column="0"  Width="150"   Height="20" Command="{Binding ReturnCommand}"></Button>
+        <Button Content="Sign up" Grid.Row="10"  Grid.ColumnSpan="2" Width="50"   Margin="10" Height="20" Command="{Binding SignUpCommand}"></Button>
+        <Button Content="Back to menu" Grid.Row="11"  Grid.Column="0"  Width="150"   Height="20" Command="{Binding BackCommand}"></Button>
         <Button Content="Exit" Grid.Row="11"  Grid.Column="1"  Width="150"   Height="20" Command="{Binding ExitCommand}"></Button>
 
     </Grid>

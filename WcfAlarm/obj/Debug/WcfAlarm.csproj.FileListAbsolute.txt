@@ -14,3 +14,5 @@ C:\Users\Iryna Butenko\source\repos\AlarmProjectButenko\WcfAlarm\obj\Debug\WcfAl
 C:\Users\Iryna Butenko\source\repos\AlarmProjectButenko\WcfAlarm\obj\Debug\WcfAlarm.csproj.CopyComplete
 C:\Users\Iryna Butenko\source\repos\AlarmProjectButenko\WcfAlarm\obj\Debug\WcfAlarm.dll
 C:\Users\Iryna Butenko\source\repos\AlarmProjectButenko\WcfAlarm\obj\Debug\WcfAlarm.pdb
+C:\Users\Iryna Butenko\source\repos\AlarmProjectButenko\WcfAlarm\bin\EntityFramework.SqlServer.dll
+C:\Users\Iryna Butenko\source\repos\AlarmProjectButenko\WcfAlarm\bin\EntityFramework.SqlServer.xml

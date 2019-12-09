@@ -14,7 +14,7 @@ namespace AlarmEntityFramework
 {
    public class AlarmDBContext:DbContext
     {
-        public AlarmDBContext() : base("Alarm")
+        public AlarmDBContext():base("AlarmsDB")
         {
             Database.SetInitializer(new MigrateDatabaseToLatestVersion<AlarmDBContext, Configuration>(true));
             Configuration.ProxyCreationEnabled = false;
