@@ -1,5 +1,3 @@
-C:\Users\Iryna Butenko\source\repos\AlarmProjectButenko\WcfAlarm\obj\Debug\WcfAlarm.csprojAssemblyReference.cache
-C:\Users\Iryna Butenko\source\repos\AlarmProjectButenko\WcfAlarm\obj\Debug\WcfAlarm.csproj.CoreCompileInputs.cache
 C:\Users\Iryna Butenko\source\repos\AlarmProjectButenko\WcfAlarm\bin\WcfAlarm.dll.config
 C:\Users\Iryna Butenko\source\repos\AlarmProjectButenko\WcfAlarm\bin\WcfAlarm.dll
 C:\Users\Iryna Butenko\source\repos\AlarmProjectButenko\WcfAlarm\bin\WcfAlarm.pdb
@@ -11,6 +9,8 @@ C:\Users\Iryna Butenko\source\repos\AlarmProjectButenko\WcfAlarm\bin\AlarmEntity
 C:\Users\Iryna Butenko\source\repos\AlarmProjectButenko\WcfAlarm\bin\Models.pdb
 C:\Users\Iryna Butenko\source\repos\AlarmProjectButenko\WcfAlarm\bin\Models.exe.config
 C:\Users\Iryna Butenko\source\repos\AlarmProjectButenko\WcfAlarm\bin\EntityFramework.xml
+C:\Users\Iryna Butenko\source\repos\AlarmProjectButenko\WcfAlarm\obj\Debug\WcfAlarm.csprojAssemblyReference.cache
+C:\Users\Iryna Butenko\source\repos\AlarmProjectButenko\WcfAlarm\obj\Debug\WcfAlarm.csproj.CoreCompileInputs.cache
 C:\Users\Iryna Butenko\source\repos\AlarmProjectButenko\WcfAlarm\obj\Debug\WcfAlarm.csproj.CopyComplete
 C:\Users\Iryna Butenko\source\repos\AlarmProjectButenko\WcfAlarm\obj\Debug\WcfAlarm.dll
 C:\Users\Iryna Butenko\source\repos\AlarmProjectButenko\WcfAlarm\obj\Debug\WcfAlarm.pdb

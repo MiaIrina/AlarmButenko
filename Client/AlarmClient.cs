@@ -1,4 +1,5 @@
-﻿using Client.ServiceAlarm;
+﻿
+
 using Client.Tools.Exceptions;
 using Models;
 using System;
@@ -32,7 +33,7 @@ namespace Client
 
         private AlarmClient()
         {
-            ClientOfAlarm = new AlarmServiceClient();
+            ClientOfAlarm = new ServiceClient();
         }
       internal void CloseCon()
         {

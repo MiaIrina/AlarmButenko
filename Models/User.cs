@@ -81,10 +81,7 @@ namespace Models
             {
                 return _email;
             }
-            private set
-            {
-                _email = value;
-            }
+            private set => _email = value;
         }
 
         public string Password

@@ -107,11 +107,18 @@ namespace Client.ViewModels
             if (result)
             {   
                 var usertoAdd = new User(Name, Surname, Login, Email, Password);
-                AlarmClient.Client.AddUser(usertoAdd);
-                StationManager.Current = usertoAdd;
+                if (!AlarmClient.Client.UserExistsInDB(usertoAdd))
+                {
+                    AlarmClient.Client.AddUser(usertoAdd);
+                    StationManager.Current = usertoAdd;
+                    NavigationManager.Instance.Navigate(ViewType.Alarms);
+                }
+                else MessageBox.Show("This user is already exists!");
+                
+              
             } return;
            
-            //NavigationManager.Instance.Navigate(ViewType.ShowRequests);
+            
         }
 
        
