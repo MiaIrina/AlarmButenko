@@ -13,5 +13,5 @@ C:\Users\Iryna Butenko\source\repos\AlarmProjectButenko\AlarmEntityFramework\obj
 C:\Users\Iryna Butenko\source\repos\AlarmProjectButenko\AlarmEntityFramework\bin\Debug\Models.exe
 C:\Users\Iryna Butenko\source\repos\AlarmProjectButenko\AlarmEntityFramework\bin\Debug\Models.pdb
 C:\Users\Iryna Butenko\source\repos\AlarmProjectButenko\AlarmEntityFramework\bin\Debug\Models.exe.config
-C:\Users\Iryna Butenko\source\repos\AlarmProjectButenko\AlarmEntityFramework\obj\Debug\AlarmEntityFramework.Migrations.AlarmDB.resources
+C:\Users\Iryna Butenko\source\repos\AlarmProjectButenko\AlarmEntityFramework\obj\Debug\AlarmEntityFramework.Migrations.AlarmData.resources
 C:\Users\Iryna Butenko\source\repos\AlarmProjectButenko\AlarmEntityFramework\obj\Debug\AlarmEntityFramework.csproj.GenerateResource.cache

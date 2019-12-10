@@ -90,7 +90,7 @@ namespace Models
             {
                 return _password;
             }
-            set { _password = value; }
+          private  set { _password = value; }
         }
         public DateTime LastLoginDate
         {
@@ -98,13 +98,13 @@ namespace Models
             {
                 return _lastLoginDate;
             }
-            set
+            private set
             {
                 _lastLoginDate = value;
             }
         }
 
-        public List<Alarm> Alarms
+        public virtual List<Alarm> Alarms
         {
             get => _alarms;
             set => _alarms = value;
@@ -124,7 +124,7 @@ namespace Models
             _password = EncryptPassword(password);
         }
 
-        private User()
+        public User()
         {
             _alarms = new List<Alarm>();
         }

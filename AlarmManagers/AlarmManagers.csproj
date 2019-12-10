@@ -36,7 +36,6 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="AlarmDBManager.cs" />
     <Compile Include="FileFolderHelper.cs" />
     <Compile Include="SerializationManager.cs" />
     <Compile Include="StationManager.cs" />

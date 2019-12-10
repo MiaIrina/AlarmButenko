@@ -1,5 +1,5 @@
 ﻿using AlarmEntityFramework.Configurations;
-
+using AlarmEntityFramework.Migrations;
 using Models;
 using System.Data.Entity;
 
@@ -7,10 +7,10 @@ namespace AlarmEntityFramework
 {
     public class AlarmDBContext:DbContext
     {
-        public AlarmDBContext():base("AlarmDB")
+        public AlarmDBContext():base("AlarmData")
         {
-         // Database.SetInitializer(new MigrateDatabaseToLatestVersion<AlarmDBContext, Configuration>(true));
-          // Configuration.ProxyCreationEnabled = false;
+            Database.SetInitializer(new MigrateDatabaseToLatestVersion<AlarmDBContext, Configuration>(true));
+            Configuration.ProxyCreationEnabled = false;
         }
 
         public DbSet<User> Users { get; set; }

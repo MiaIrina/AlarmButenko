@@ -20,11 +20,8 @@ namespace AlarmEntityFramework.Configurations
             Property(user => user.Login).HasColumnName("Login").IsRequired();
             Property(user => user.Email).HasColumnName("Email").IsRequired();
             Property(user => user.Password).HasColumnName("Password").IsRequired();
-            Property(user => user.LastLoginDate).HasColumnName("DateOfLastLogin").HasColumnType("datetime2").IsRequired();
-            HasMany(user => user.Alarms).
-                WithRequired(a => a.User)
-                .HasForeignKey(a => a.OwnerGuid)
-                .WillCascadeOnDelete(true);
+            Property(user => user.LastLoginDate).HasColumnName("LastLoginDate").HasColumnType("datetime2").IsRequired();
+         
                 
         }
     }

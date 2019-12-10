@@ -30,7 +30,7 @@ namespace Client.ViewModels
             }
         }
 
-        internal ObservableCollection<Alarm> Alarms {
+        public ObservableCollection<Alarm> Alarms {
             get
             {
                 return _alarms;
@@ -38,6 +38,7 @@ namespace Client.ViewModels
             private set
             {
                 _alarms = value;
+                OnPropertyChanged();
             }
         }
 
@@ -48,7 +49,7 @@ namespace Client.ViewModels
         }
         public AlarmsViewModel()
         {
-            Alarms = new ObservableCollection<Alarm>(AlarmClient.Client.GetAlarms(StationManager.Current));
+            Alarms = new ObservableCollection<Alarm>(AlarmClient.Sample.GetAlarms(StationManager.Current));
         }
     }
 }

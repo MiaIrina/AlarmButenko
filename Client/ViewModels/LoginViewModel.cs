@@ -115,7 +115,7 @@ namespace Client.ViewModels
                 {
                    
                     Checker.CheckLogin(Login);
-                    usertoCheck = AlarmClient.Client.UserByLogin(Login);
+                    usertoCheck = AlarmClient.Sample.UserByLogin(Login);
                     usertoCheck = usertoCheck ?? throw new Exception($"The user with login {Login} doesn`t exist !");
                   
                 if (!usertoCheck.CheckPassword(Password))

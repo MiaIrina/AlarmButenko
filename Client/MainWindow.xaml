@@ -6,7 +6,7 @@
         xmlns:local="clr-namespace:Client"
         xmlns:fa="http://schemas.fontawesome.io/icons/"
         mc:Ignorable="d"
-        Title="AlarmApp" Height="400" Width="500">
+        Title="AlarmApp" Height="400" Width="300">
     <Grid Background="Cornsilk">
         <ContentControl Name="_contentControl" IsEnabled="{Binding Path=IsControlEnabled, Mode=OneWay, UpdateSourceTrigger=PropertyChanged}"/>
         <fa:ImageAwesome Name="ImageAwesome"  Icon="Spinner" Width="80" Height="80" HorizontalAlignment="Center" VerticalAlignment="Center" Spin="True" Visibility="{Binding Path=LoaderVisibility, Mode=OneWay, UpdateSourceTrigger=PropertyChanged}"/>

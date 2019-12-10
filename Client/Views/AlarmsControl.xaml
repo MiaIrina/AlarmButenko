@@ -27,10 +27,8 @@
 
         <Button Content="Back to the menu" Grid.Row="2"  Grid.Column="0"  Width="150"    Height="20" Command="{Binding BackCommand}"></Button>
         <Button Content="Exit" Grid.Row="2"  Grid.Column="1"  Width="150"   Height="20" Command="{Binding ExitCommand}"></Button>
-        <ListBox   ItemsSource="{Binding Alarms}" Grid.Row="0" Grid.ColumnSpan="2"  HorizontalAlignment="Center" Height="200" VerticalAlignment="Top" Width="500" Foreground="#FFC58B8B">
-            <ListBox.Effect>
-                <BlurEffect Radius="6" KernelType="Box"/>
-            </ListBox.Effect>
+        <ListBox   ItemsSource="{Binding Alarms, Mode=OneWay}" Grid.Row="0" Grid.ColumnSpan="2"  HorizontalAlignment="Center" Height="200" VerticalAlignment="Top" Width="300" >
+           
             <ListBox.ItemTemplate>
                 <DataTemplate>
                     <Grid>
@@ -39,9 +37,9 @@
                             <ColumnDefinition Width="Auto"/>
                             <ColumnDefinition Width="Auto"/>
                         </Grid.ColumnDefinitions>
-                        <ComboBox Width="30" Grid.Column="0" Height="30" SelectedValue="{Binding Path=Hour}" ></ComboBox>
+                        <ComboBox Width="30" Grid.Column="0" Height="30" SelectedValue="2" ></ComboBox>
                         <Label Content=":" Grid.Column="1" VerticalAlignment="Top" Height="38" FontSize="18"/>
-                        <ComboBox Width="30" Height="30" Grid.Column="2" SelectedValue="{Binding Path=Minutes}"></ComboBox>
+                        <ComboBox Width="30" Height="30" Grid.Column="2" SelectedValue="{Binding Path=Minutes, Mode=OneWay}"></ComboBox>
                     </Grid>
                 </DataTemplate>
             </ListBox.ItemTemplate>

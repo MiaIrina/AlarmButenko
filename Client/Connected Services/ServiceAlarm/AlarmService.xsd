@@ -28,7 +28,9 @@
       <xs:element minOccurs="0" name="BeginTime" type="xs:dateTime" />
       <xs:element minOccurs="0" name="EndTime" type="xs:dateTime" />
       <xs:element minOccurs="0" name="Guid" type="ser:guid" />
-      <xs:element minOccurs="0" name="OwnerGuid" type="ser:guid" />
+      <xs:element minOccurs="0" name="Hour" type="xs:int" />
+      <xs:element minOccurs="0" name="Minutes" type="xs:int" />
+      <xs:element minOccurs="0" name="UserGuid" type="ser:guid" />
     </xs:sequence>
   </xs:complexType>
   <xs:element name="Alarm" nillable="true" type="tns:Alarm" />

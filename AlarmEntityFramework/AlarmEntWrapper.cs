@@ -41,7 +41,7 @@ namespace AlarmEntityFramework
         {
             using (var context = new AlarmDBContext())
             {
-                alarm.deleteDBValues();
+                
                 context.Alarms.Add(alarm);
                 context.SaveChanges();
             }
@@ -69,7 +69,7 @@ namespace AlarmEntityFramework
         {
             using (var context = new AlarmDBContext())
             {
-                return context.Alarms.Where(r => r.OwnerGuid == guid).ToList();
+                return context.Alarms.Where(r => r.UserGuid == guid).ToList();
             }
         }
 

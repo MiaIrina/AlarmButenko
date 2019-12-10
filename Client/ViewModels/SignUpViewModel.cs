@@ -147,6 +147,7 @@ namespace Client.ViewModels
             LoaderManager.Instance.ShowLoader();
             bool result = await Task.Run(() =>
             {
+
                 try {
                 Checker.CheckName(Name);
                 Checker.CheckSurname(Surname);
@@ -166,11 +167,12 @@ namespace Client.ViewModels
             if (result)
             {   
                 var usertoAdd = new User(Name, Surname, Login, Email, Password);
-                if (!AlarmClient.Client.UserExistsInDB(usertoAdd))
+                if (!AlarmClient.Sample.UserExistsInDB(usertoAdd))
                 {
-                    AlarmClient.Client.AddUser(usertoAdd);
+                    AlarmClient.Sample.AddUser(usertoAdd);
                     StationManager.Current = usertoAdd;
-                    AlarmClient.Client.AddAlarm(new Alarm(14, 34, StationManager.Current));
+                    Alarm toAdd = new Alarm(14, 34) { UserGuid= StationManager.Current.Guid };
+                    AlarmClient.Sample.AddAlarm(toAdd);
                     MessageBox.Show($"Welcome {Name} !");
                     NavigationManager.Instance.Navigate(ViewType.Alarms);
                     

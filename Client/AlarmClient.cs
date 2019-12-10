@@ -1,7 +1,8 @@
 ﻿
 
-using Client.ServiceAlarm;
 
+
+using Client.ServiceAlarm;
 using Models;
 
 using System.Collections.Generic;
@@ -10,19 +11,20 @@ namespace Client
 {
     internal class AlarmClient
     {
-        private static AlarmClient _client;
+        private static AlarmClient _sample;
         private static readonly object Locker = new object();
 
-        internal static AlarmClient Client
+        internal static AlarmClient Sample
         {
             get
             {
-                if (_client == null)
-                    lock (Locker)
+                if (_sample!= null)
+                    return _sample;
+
+                lock (Locker)
                 {
-                    return _client ?? (_client = new AlarmClient());
+                    return _sample ?? (_sample = new AlarmClient());
                 }
-                    return _client;
                 
             }
         }
