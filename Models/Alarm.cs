@@ -16,9 +16,9 @@ namespace Models
         [DataMember]
         private User _alarmUser;
         [DataMember]
-        private int _hour;
+        private DateTime _beginTime;
         [DataMember]
-        private int _minutes;
+        private DateTime _endTime;
         [DataMember]
         private User _user;
         public Guid Guid
@@ -37,17 +37,17 @@ namespace Models
             get => _userGuid;
             set => _userGuid = value;
         }
-        public int Hour
+        public DateTime BeginTime
         {
 
-            get => _hour;
-            set => _hour = value;
+            get => _beginTime;
+            set => _beginTime = value;
         }
-        public int Minutes
+        public DateTime EndTime
         {
 
-            get => _minutes;
-            set => _minutes = value;
+            get => _endTime;
+            set => _endTime = value;
         }
 
         public User User
@@ -55,12 +55,22 @@ namespace Models
             get { return _user; }
             private set { _user = value; }
         }
+        private DateTime CountDate(int hour, int minutes)
+        {
+            DateTime today = DateTime.Now;
+            DateTime res = new DateTime(today.Year,today.Month,today.Day,hour,minutes,0);
+            if (today.Hour > hour||(today.Hour == hour && today.Minute>minutes))
+            {
+                res.AddDays(1);
+            }
+            return res;
 
+        }
         public Alarm(int hour, int minutes, User user) : this()
         {
             _guid = Guid.NewGuid();
-            _hour = hour;
-            _minutes = minutes;
+            _beginTime = CountDate(hour,minutes);
+            _endTime=_beginTime.AddMinutes(2);
             _user = user;
             _userGuid = user.Guid;
             User.Alarms.Add(this);

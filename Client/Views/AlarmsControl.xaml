@@ -12,20 +12,21 @@
             <RowDefinition Height="Auto" />
             <RowDefinition Height="Auto" />
             <RowDefinition Height="Auto" />
-            
-            
+
+
         </Grid.RowDefinitions>
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="*"/>
             <ColumnDefinition Width="*"/>
-            
-            
+
+
         </Grid.ColumnDefinitions>
         <Button Content="Add alarm" Grid.Row="0"  Grid.Column="0"  Width="70"   Margin="10" Height="20" Command="{Binding AddAlarmCommand}"></Button>
         <Button Content="Delete alarm" Grid.Row="0"  Grid.Column="1"  Width="70"   Margin="10" Height="20" Command="{Binding DeleteAlarmCommand}"></Button>
 
         <Button Content="Back to the menu" Grid.Row="1"  Grid.Column="0"  Width="150"    Height="20" Command="{Binding BackCommand}"></Button>
         <Button Content="Exit" Grid.Row="1"  Grid.Column="1"  Width="150"   Height="20" Command="{Binding ExitCommand}"></Button>
+       
 
     </Grid>
 </UserControl>

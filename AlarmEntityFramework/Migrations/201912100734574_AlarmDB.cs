@@ -3,7 +3,7 @@
     using System;
     using System.Data.Entity.Migrations;
     
-    public partial class MigrationAlarm : DbMigration
+    public partial class AlarmDB : DbMigration
     {
         public override void Up()
         {
@@ -13,8 +13,8 @@
                     {
                         Id = c.Guid(nullable: false),
                         OwnerGuid = c.Guid(nullable: false),
-                        Hour = c.Int(nullable: false),
-                        Minutes = c.Int(nullable: false),
+                        DateOfStart = c.DateTime(nullable: false, precision: 7, storeType: "datetime2"),
+                        DateOfEnd = c.DateTime(nullable: false, precision: 7, storeType: "datetime2"),
                         AlarmUser_Guid = c.Guid(),
                     })
                 .PrimaryKey(t => t.Id)

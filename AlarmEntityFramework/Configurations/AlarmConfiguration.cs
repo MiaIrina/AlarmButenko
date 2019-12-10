@@ -15,8 +15,8 @@ namespace AlarmEntityFramework.Configurations
             ToTable("Alarms");
             HasKey(a => a.Guid);
             Property(a => a.Guid).HasColumnName("Id").IsRequired();
-            Property(a => a.Hour).HasColumnName("Hour").IsRequired();
-            Property(a => a.Minutes).HasColumnName("Minutes").IsRequired();
+            Property(a => a.BeginTime).HasColumnName("DateOfStart").HasColumnType("datetime2").IsRequired();
+            Property(a => a.EndTime).HasColumnName("DateOfEnd").HasColumnType("datetime2").IsRequired();
 
         }
 

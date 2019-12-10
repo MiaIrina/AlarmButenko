@@ -7,13 +7,13 @@ namespace AlarmEntityFramework.Migrations
     using System.Resources;
     
     [GeneratedCode("EntityFramework.Migrations", "6.4.0")]
-    public sealed partial class MigrationAlarm : IMigrationMetadata
+    public sealed partial class AlarmDB : IMigrationMetadata
     {
-        private readonly ResourceManager Resources = new ResourceManager(typeof(MigrationAlarm));
+        private readonly ResourceManager Resources = new ResourceManager(typeof(AlarmDB));
         
         string IMigrationMetadata.Id
         {
-            get { return "201912091940528_MigrationAlarm"; }
+            get { return "201912100734574_AlarmDB"; }
         }
         
         string IMigrationMetadata.Source

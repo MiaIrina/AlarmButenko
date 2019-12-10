@@ -1,23 +1,16 @@
 ﻿using AlarmEntityFramework.Configurations;
-using AlarmEntityFramework.Migrations;
 
 using Models;
-using System;
-using System.Collections.Generic;
-
 using System.Data.Entity;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace AlarmEntityFramework
 {
-   public class AlarmDBContext:DbContext
+    public class AlarmDBContext:DbContext
     {
-        public AlarmDBContext():base("AlarmsDB")
+        public AlarmDBContext():base("AlarmDB")
         {
-            Database.SetInitializer(new MigrateDatabaseToLatestVersion<AlarmDBContext, Configuration>(true));
-            Configuration.ProxyCreationEnabled = false;
+         // Database.SetInitializer(new MigrateDatabaseToLatestVersion<AlarmDBContext, Configuration>(true));
+          // Configuration.ProxyCreationEnabled = false;
         }
 
         public DbSet<User> Users { get; set; }
@@ -29,4 +22,6 @@ namespace AlarmEntityFramework
             modelBuilder.Configurations.Add(new AlarmConfiguration());
         }
     }
+
+   
 }

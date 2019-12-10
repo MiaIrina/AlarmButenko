@@ -55,9 +55,9 @@
     <Compile Include="AlarmEntWrapper.cs" />
     <Compile Include="Configurations\AlarmConfiguration.cs" />
     <Compile Include="Configurations\UserConfiguration.cs" />
-    <Compile Include="Migrations\201912091940528_MigrationAlarm.cs" />
-    <Compile Include="Migrations\201912091940528_MigrationAlarm.designer.cs">
-      <DependentUpon>201912091940528_MigrationAlarm.cs</DependentUpon>
+    <Compile Include="Migrations\201912100734574_AlarmDB.cs" />
+    <Compile Include="Migrations\201912100734574_AlarmDB.designer.cs">
+      <DependentUpon>201912100734574_AlarmDB.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
   </ItemGroup>
@@ -68,8 +68,8 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Migrations\201912091940528_MigrationAlarm.resx">
-      <DependentUpon>201912091940528_MigrationAlarm.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\201912100734574_AlarmDB.resx">
+      <DependentUpon>201912100734574_AlarmDB.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
