@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using System.Linq;
 using System.Runtime.Serialization;
 using System.Text;
@@ -64,6 +65,9 @@ namespace Models
             set=>    _minutes = value;
             
         }
+        public ObservableCollection<int> Hours { get; private set; }
+        public ObservableCollection<int> Minut { get; private set; }
+
         public virtual User AlarmUser
         {
             get { return _user; }
@@ -96,6 +100,8 @@ namespace Models
         }
         private Alarm()
         {
+            Hours = new ObservableCollection<int>(Enumerable.Range(0, 24));
+            Minut = new ObservableCollection<int>(Enumerable.Range(0, 60));
         }
     }
 }

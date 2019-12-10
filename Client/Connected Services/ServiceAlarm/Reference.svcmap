@@ -22,11 +22,12 @@
     <MetadataSource Address="http://localhost:54020/AlarmService.svc" Protocol="http" SourceId="1" />
   </MetadataSources>
   <Metadata>
-    <MetadataFile FileName="AlarmService.xsd" MetadataType="Schema" ID="4610e8fb-9b4c-46d1-bfe1-dd599c44789d" SourceId="1" SourceUrl="http://localhost:54020/AlarmService.svc?xsd=xsd2" />
     <MetadataFile FileName="AlarmService1.xsd" MetadataType="Schema" ID="211a46cd-3e36-48da-bfff-16fc8485475b" SourceId="1" SourceUrl="http://localhost:54020/AlarmService.svc?xsd=xsd1" />
-    <MetadataFile FileName="AlarmService2.xsd" MetadataType="Schema" ID="51b6a09b-f73d-4134-b45f-b775420c5f10" SourceId="1" SourceUrl="http://localhost:54020/AlarmService.svc?xsd=xsd0" />
+    <MetadataFile FileName="AlarmService3.xsd" MetadataType="Schema" ID="5f25d0ed-1990-477e-aedf-2d89e2c62d74" SourceId="1" SourceUrl="http://localhost:54020/AlarmService.svc?xsd=xsd3" />
     <MetadataFile FileName="AlarmService.wsdl" MetadataType="Wsdl" ID="8027d3f6-d801-4540-b508-239c6780e5d9" SourceId="1" SourceUrl="http://localhost:54020/AlarmService.svc?wsdl" />
+    <MetadataFile FileName="AlarmService2.xsd" MetadataType="Schema" ID="51b6a09b-f73d-4134-b45f-b775420c5f10" SourceId="1" SourceUrl="http://localhost:54020/AlarmService.svc?xsd=xsd0" />
     <MetadataFile FileName="AlarmService.disco" MetadataType="Disco" ID="cf3dad54-1f3d-4161-a55f-a6a3165222a4" SourceId="1" SourceUrl="http://localhost:54020/AlarmService.svc?disco" />
+    <MetadataFile FileName="AlarmService.xsd" MetadataType="Schema" ID="4610e8fb-9b4c-46d1-bfe1-dd599c44789d" SourceId="1" SourceUrl="http://localhost:54020/AlarmService.svc?xsd=xsd2" />
   </Metadata>
   <Extensions>
     <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />

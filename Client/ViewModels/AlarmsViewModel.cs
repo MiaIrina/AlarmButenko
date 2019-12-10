@@ -4,13 +4,15 @@ using Client.Tools.Navigation;
 using Models;
 using System;
 using System.Collections.ObjectModel;
-
+using System.Linq;
 
 namespace Client.ViewModels
 {
   internal class AlarmsViewModel:BaseViewModel
     {
         #region Fields
+    
+       
         private ObservableCollection <Alarm> _alarms;
         private RelayCommand<object> _exitCommand;
         private RelayCommand<object> _backCommand;
@@ -49,7 +51,8 @@ namespace Client.ViewModels
         }
         public AlarmsViewModel()
         {
-            Alarms = new ObservableCollection<Alarm>(AlarmClient.Sample.GetAlarms(StationManager.Current));
+           _alarms = new ObservableCollection<Alarm>(AlarmClient.Sample.GetAlarms(StationManager.Current));
+            
         }
     }
 }

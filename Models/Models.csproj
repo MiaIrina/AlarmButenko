@@ -42,6 +42,7 @@
     <Compile Include="User.cs" />
   </ItemGroup>
   <ItemGroup>
+    <Reference Include="System" />
     <Reference Include="System.Runtime.Serialization" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

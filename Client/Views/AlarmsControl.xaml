@@ -37,9 +37,9 @@
                             <ColumnDefinition Width="Auto"/>
                             <ColumnDefinition Width="Auto"/>
                         </Grid.ColumnDefinitions>
-                        <ComboBox Width="30" Grid.Column="0" Height="30" SelectedValue="2" ></ComboBox>
+                        <ComboBox Width="60" Grid.Column="0" Height="30" ItemsSource="{Binding Hours, Mode=OneWay}" SelectedIndex="{Binding Hour, Mode=OneWay}"></ComboBox>
                         <Label Content=":" Grid.Column="1" VerticalAlignment="Top" Height="38" FontSize="18"/>
-                        <ComboBox Width="30" Height="30" Grid.Column="2" SelectedValue="{Binding Path=Minutes, Mode=OneWay}"></ComboBox>
+                        <ComboBox Width="60" Height="30" Grid.Column="2" ItemsSource="{Binding Minut, Mode=OneWay}" SelectedIndex="{Binding Minutes, Mode=OneWay}"></ComboBox>
                     </Grid>
                 </DataTemplate>
             </ListBox.ItemTemplate>
