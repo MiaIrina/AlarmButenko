@@ -49,7 +49,16 @@ namespace Models
             get => _endTime;
             set => _endTime = value;
         }
+        public int Hour
+        {
 
+            get =>BeginTime.Hour;
+           
+        }
+        public int Minutes
+        {
+            get => BeginTime.Minute;
+        }
         public User User
         {
             get { return _user; }

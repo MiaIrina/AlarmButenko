@@ -1,18 +1,17 @@
 ﻿using Client.Tools;
 using Client.Tools.Managers;
 using Client.Tools.Navigation;
+using Models;
 using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+using System.Collections.ObjectModel;
+
 
 namespace Client.ViewModels
 {
   internal class AlarmsViewModel:BaseViewModel
     {
         #region Fields
-
+        private ObservableCollection <Alarm> _alarms;
         private RelayCommand<object> _exitCommand;
         private RelayCommand<object> _backCommand;
         #endregion
@@ -30,10 +29,26 @@ namespace Client.ViewModels
                 return _backCommand ?? (_backCommand = new RelayCommand<object>(o=>LogOut()));
             }
         }
+
+        internal ObservableCollection<Alarm> Alarms {
+            get
+            {
+                return _alarms;
+            }
+            private set
+            {
+                _alarms = value;
+            }
+        }
+
         private void LogOut()
         {
             NavigationManager.Instance.Navigate(ViewType.Main);
                 StationManager.Current = null;
+        }
+        public AlarmsViewModel()
+        {
+            Alarms = new ObservableCollection<Alarm>(AlarmClient.Client.GetAlarms(StationManager.Current));
         }
     }
 }

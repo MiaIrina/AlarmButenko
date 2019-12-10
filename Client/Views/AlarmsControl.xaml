@@ -8,6 +8,7 @@
              d:DesignHeight="450" d:DesignWidth="800">
     <Grid>
         <Grid.RowDefinitions>
+            <RowDefinition Height="200" />
             <RowDefinition Height="Auto" />
             <RowDefinition Height="Auto" />
             <RowDefinition Height="Auto" />
@@ -21,12 +22,38 @@
 
 
         </Grid.ColumnDefinitions>
-        <Button Content="Add alarm" Grid.Row="0"  Grid.Column="0"  Width="70"   Margin="10" Height="20" Command="{Binding AddAlarmCommand}"></Button>
-        <Button Content="Delete alarm" Grid.Row="0"  Grid.Column="1"  Width="70"   Margin="10" Height="20" Command="{Binding DeleteAlarmCommand}"></Button>
+        <Button Content="Add alarm" Grid.Row="1"  Grid.Column="0"  Width="70"   Margin="10" Height="20" Command="{Binding AddAlarmCommand}"></Button>
+        <Button Content="Delete alarm" Grid.Row="1"  Grid.Column="1"  Width="70"   Margin="10" Height="20" Command="{Binding DeleteAlarmCommand}"></Button>
 
-        <Button Content="Back to the menu" Grid.Row="1"  Grid.Column="0"  Width="150"    Height="20" Command="{Binding BackCommand}"></Button>
-        <Button Content="Exit" Grid.Row="1"  Grid.Column="1"  Width="150"   Height="20" Command="{Binding ExitCommand}"></Button>
-       
+        <Button Content="Back to the menu" Grid.Row="2"  Grid.Column="0"  Width="150"    Height="20" Command="{Binding BackCommand}"></Button>
+        <Button Content="Exit" Grid.Row="2"  Grid.Column="1"  Width="150"   Height="20" Command="{Binding ExitCommand}"></Button>
+        <ListBox   ItemsSource="{Binding Alarms}" Grid.Row="0" Grid.ColumnSpan="2"  HorizontalAlignment="Center" Height="200" VerticalAlignment="Top" Width="500" Foreground="#FFC58B8B">
+            <ListBox.Effect>
+                <BlurEffect Radius="6" KernelType="Box"/>
+            </ListBox.Effect>
+            <ListBox.ItemTemplate>
+                <DataTemplate>
+                    <Grid>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="Auto"/>
+                            <ColumnDefinition Width="Auto"/>
+                            <ColumnDefinition Width="Auto"/>
+                        </Grid.ColumnDefinitions>
+                        <ComboBox Width="30" Grid.Column="0" Height="30" SelectedValue="{Binding Path=Hour}" ></ComboBox>
+                        <Label Content=":" Grid.Column="1" VerticalAlignment="Top" Height="38" FontSize="18"/>
+                        <ComboBox Width="30" Height="30" Grid.Column="2" SelectedValue="{Binding Path=Minutes}"></ComboBox>
+                    </Grid>
+                </DataTemplate>
+            </ListBox.ItemTemplate>
+
+                <ListBox.Background>
+                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                    <GradientStop Color="#FFF1F0F1" Offset="0"/>
+                    <GradientStop Color="#FFBC91E8" Offset="0.923"/>
+                </LinearGradientBrush>
+            </ListBox.Background>
+        </ListBox>
+
 
     </Grid>
 </UserControl>
