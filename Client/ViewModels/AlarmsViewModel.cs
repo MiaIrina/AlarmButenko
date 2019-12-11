@@ -19,7 +19,10 @@ namespace Client.ViewModels
         private ObservableCollection <Alarm> _alarms;
         private RelayCommand<object> _exitCommand;
         private RelayCommand<object> _backCommand;
+        private RelayCommand<object> _deleteCommand;
         private RelayCommand<object> _addAlarmCommand;
+        private Alarm _selectedAlarm;
+        private bool _isAlarmSelected;
         #endregion
         public RelayCommand<Object> ExitCommand
         {
@@ -42,7 +45,51 @@ namespace Client.ViewModels
                 return _addAlarmCommand ?? (_addAlarmCommand = new RelayCommand<object>(AddNewAlarm));
             }
         }
+        public RelayCommand<Object> DeleteCommand
+        {
+            get
+            {
+                return _deleteCommand ?? (_deleteCommand = new RelayCommand<object>(DeleteAlarm));
+            }
+        }
 
+        private void DeleteAlarm(object obj)
+        {
+            AlarmClient.Sample.DeleteAlarm(SelectedAlarm);
+            Alarms.Remove(SelectedAlarm);
+
+        }
+
+        public Alarm SelectedAlarm
+        {
+            get
+            {
+                return _selectedAlarm;
+            }
+            set
+            {
+                _selectedAlarm = value;
+                if (_selectedAlarm != null)
+                    IsAlarmSelected = true;
+                else
+                {
+                    IsAlarmSelected = false;
+                }
+                OnPropertyChanged();
+            }
+        }
+        public bool IsAlarmSelected
+        {
+            get
+            {
+                return _isAlarmSelected;
+            }
+            private set
+            {
+                _isAlarmSelected = value;
+                OnPropertyChanged();
+            }
+        }
         private async void AddNewAlarm(object obj)
         {
                 LoaderManager.Instance.ShowLoader();

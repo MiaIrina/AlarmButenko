@@ -23,11 +23,11 @@
 
         </Grid.ColumnDefinitions>
         <Button Content="Add alarm" Grid.Row="1"  Grid.Column="0"  Width="70"   Margin="10" Height="20" Command="{Binding AddAlarmCommand}"></Button>
-        <Button Content="Delete alarm" Grid.Row="1"  Grid.Column="1"  Width="70"   Margin="10" Height="20" Command="{Binding DeleteAlarmCommand}"></Button>
+        <Button Content="Delete alarm" Grid.Row="1" IsEnabled="{Binding IsAlarmSelected}" Grid.Column="1"  Width="70"   Margin="10" Height="20" Command="{Binding DeleteCommand}"></Button>
 
         <Button Content="Back to the menu" Grid.Row="2"  Grid.Column="0"  Width="150"    Height="20" Command="{Binding BackCommand}"></Button>
         <Button Content="Exit" Grid.Row="2"  Grid.Column="1"  Width="150"   Height="20" Command="{Binding ExitCommand}"></Button>
-        <ListBox   ItemsSource="{Binding Alarms, Mode=OneWay}" Grid.Row="0" Grid.ColumnSpan="2"  HorizontalAlignment="Center" Height="200" VerticalAlignment="Top" Width="300" >
+        <ListBox   ItemsSource="{Binding Alarms, Mode=OneWay}" Grid.Row="0" Grid.ColumnSpan="2"  HorizontalAlignment="Center" Height="200" VerticalAlignment="Top" Width="300" SelectedItem="{Binding SelectedAlarm}" >
            
             <ListBox.ItemTemplate>
                 <DataTemplate>
