@@ -98,7 +98,7 @@ namespace Models
         {
             _user = null;
         }
-        private Alarm()
+        public Alarm()
         {
             Hours = new ObservableCollection<int>(Enumerable.Range(0, 24));
             Minut = new ObservableCollection<int>(Enumerable.Range(0, 60));
