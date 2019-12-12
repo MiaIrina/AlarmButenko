@@ -95,12 +95,11 @@ namespace Client.ViewModels
                 LoaderManager.Instance.ShowLoader();
             bool result =await Task.Run(() =>
             {
-                Alarm toAdd;
+                
                 try
                 {
-                    toAdd = findthePossibleAlarm();
-                    toAdd.UserGuid = StationManager.Current.Guid;
-                    AlarmClient.Sample.AddAlarm(toAdd);
+                    findthePossibleAlarm();
+                    
                    
                     
                 }
@@ -114,8 +113,7 @@ namespace Client.ViewModels
             LoaderManager.Instance.HideLoader();
             if (result)
             {
-                Alarms = new ObservableCollection<Alarm>(AlarmClient.Sample.GetAlarms(StationManager.Current));
-                MessageBox.Show("New alarm is added");
+                NavigationManager.Instance.Navigate(ViewType.CreateAlarm);
             }
             return;
             }

@@ -36,3 +36,5 @@ C:\Users\Iryna Butenko\source\repos\AlarmProjectButenko\Client\bin\Debug\FontAwe
 C:\Users\Iryna Butenko\source\repos\AlarmProjectButenko\Client\bin\Debug\FontAwesome.WPF.xml
 C:\Users\Iryna Butenko\source\repos\AlarmProjectButenko\Client\obj\Debug\Views\AlarmsControl.g.cs
 C:\Users\Iryna Butenko\source\repos\AlarmProjectButenko\Client\obj\Debug\Views\AlarmsControl.baml
+C:\Users\Iryna Butenko\source\repos\AlarmProjectButenko\Client\obj\Debug\Views\AddAlarmControl.g.cs
+C:\Users\Iryna Butenko\source\repos\AlarmProjectButenko\Client\obj\Debug\Views\AddAlarmControl.baml

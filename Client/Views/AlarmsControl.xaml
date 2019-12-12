@@ -27,7 +27,7 @@
 
         <Button Content="Back to the menu" Grid.Row="2"  Grid.Column="0"  Width="150"    Height="20" Command="{Binding BackCommand}"></Button>
         <Button Content="Exit" Grid.Row="2"  Grid.Column="1"  Width="150"   Height="20" Command="{Binding ExitCommand}"></Button>
-        <ListBox   ItemsSource="{Binding Alarms, Mode=OneWay}" Grid.Row="0" Grid.ColumnSpan="2"  HorizontalAlignment="Center" Height="200" VerticalAlignment="Top" Width="300" SelectedItem="{Binding SelectedAlarm}" >
+        <ListBox   ItemsSource="{Binding Alarms, Mode=OneWay}" Grid.Row="0" Grid.ColumnSpan="2"  HorizontalAlignment="Center" Height="200" VerticalAlignment="Top" Width="450" SelectedItem="{Binding SelectedAlarm}" >
            
             <ListBox.ItemTemplate>
                 <DataTemplate>
@@ -37,9 +37,9 @@
                             <ColumnDefinition Width="Auto"/>
                             <ColumnDefinition Width="Auto"/>
                         </Grid.ColumnDefinitions>
-                        <ComboBox Width="60" Grid.Column="0" Height="30" ItemsSource="{Binding Hours, Mode=OneWay}" SelectedIndex="{Binding Hour, Mode=OneWay}"></ComboBox>
+                        <ComboBox  Width="60" Grid.Column="0" Height="30" ItemsSource="{Binding Hours, Mode=OneWay}" SelectedIndex="{Binding Hour, Mode=OneWay}"></ComboBox>
                         <Label Content=":" Grid.Column="1" VerticalAlignment="Top" Height="38" FontSize="18"/>
-                        <ComboBox Width="60" Height="30" Grid.Column="2" ItemsSource="{Binding Minut, Mode=OneWay}" SelectedIndex="{Binding Minutes, Mode=OneWay}"></ComboBox>
+                        <ComboBox  Width="60" Height="30" Grid.Column="2" ItemsSource="{Binding Minut, Mode=OneWay}" SelectedIndex="{Binding Minutes, Mode=OneWay}"></ComboBox>
                     </Grid>
                 </DataTemplate>
             </ListBox.ItemTemplate>

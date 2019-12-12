@@ -10,11 +10,11 @@ none
 false
 DEBUG;TRACE
 C:\Users\Iryna Butenko\source\repos\AlarmProjectButenko\Client\App.xaml
-51115657793
+61183230355
 
-351008160332
+37-1245137477
 18878074887
-MainWindow.xaml;Views\AlarmsControl.xaml;Views\LoginControl.xaml;Views\MainMenuControl.xaml;Views\SignUpControl.xaml;
+MainWindow.xaml;Views\AddAlarmControl.xaml;Views\AlarmsControl.xaml;Views\LoginControl.xaml;Views\MainMenuControl.xaml;Views\SignUpControl.xaml;
 
-False
+True
 
