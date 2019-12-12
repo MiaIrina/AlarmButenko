@@ -35,7 +35,7 @@ namespace Client.ViewModels
         {
             get
             {
-                return _backCommand ?? (_backCommand = new RelayCommand<object>(o => LogOut()));
+                return _backCommand ?? (_backCommand = new RelayCommand<object>(o => NavigationManager.Instance.Navigate(ViewType.Alarms)));
             }
         }
         public RelayCommand<Object> AddAlarmCommand
@@ -57,11 +57,7 @@ namespace Client.ViewModels
 
         }
 
-        private void LogOut()
-        {
-            NavigationManager.Instance.Navigate(ViewType.Main);
-            StationManager.Current = null;
-        }
+        
         public IEnumerable<int> PossibleHours
         {
 

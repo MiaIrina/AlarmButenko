@@ -6,6 +6,7 @@ using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Linq;
+using System.Threading;
 using System.Threading.Tasks;
 using System.Windows;
 
@@ -23,7 +24,53 @@ namespace Client.ViewModels
         private RelayCommand<object> _addAlarmCommand;
         private Alarm _selectedAlarm;
         private bool _isAlarmSelected;
+
+        private static Thread _workingThread;
+        private static CancellationToken _token;
+        private static CancellationTokenSource _tokenSource;
         #endregion
+
+        public static void StartWorkingThread()
+        {
+            _tokenSource = new CancellationTokenSource();
+            _token = _tokenSource.Token;
+            _workingThread = new Thread(StartWorkingThreadProcess);
+            _workingThread.Start();
+            StationManager.CloseThreads += StopWorkingThread;
+        }
+        private  static void StartWorkingThreadProcess()
+        {
+            while (!_token.IsCancellationRequested)
+            {
+                if (_token.IsCancellationRequested)
+                    break;
+                List<Alarm> alarms = AlarmClient.Sample.GetAlarms(StationManager.Current).ToList();
+                foreach (var alarm in alarms)
+                {
+                    if (alarm.BeginTime.ToShortTimeString() == DateTime.Now.ToShortTimeString())
+                    {
+                        if (Application.Current.Dispatcher != null)
+                        {
+                            Application.Current.Dispatcher.Invoke(new Action(() =>
+                            {
+                                _tokenSource.Cancel();
+                                _workingThread.Abort();
+                                NavigationManager.Instance.Navigate(ViewType.AlarmMessage);
+                                MessageViewModel.StartWorkingThread();                   
+                            }));
+                        }
+                    }
+                    if (_token.IsCancellationRequested)
+                        break;
+                }
+            }
+        }
+
+        internal static void StopWorkingThread()
+        {
+            _tokenSource.Cancel();
+        }
+
         public RelayCommand<Object> ExitCommand
         {
             get
@@ -155,7 +202,9 @@ namespace Client.ViewModels
         }
         public AlarmsViewModel()
         {
-           _alarms = new ObservableCollection<Alarm>(AlarmClient.Sample.GetAlarms(StationManager.Current));
+            StartWorkingThread();
+           Alarms = new ObservableCollection<Alarm>(AlarmClient.Sample.GetAlarms(StationManager.Current));
+          
             
         }
     }

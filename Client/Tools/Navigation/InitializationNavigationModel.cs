@@ -36,6 +36,9 @@ namespace Client.Tools.Navigation
                 case ViewType.CreateAlarm:
                     ViewsDictionary.Add(viewType, new AddAlarmControl());
                     break;
+                case ViewType.AlarmMessage:
+                    ViewsDictionary.Add(viewType, new MessageControl());
+                    break;
                 default:
                     throw new ArgumentOutOfRangeException(nameof(viewType), viewType, null);
             }

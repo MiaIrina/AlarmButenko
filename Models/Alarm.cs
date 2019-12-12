@@ -65,7 +65,8 @@ namespace Models
             set=>    _minutes = value;
             
         }
-        public ObservableCollection<int> Hours { get; private set; }
+        public ObservableCollection<int> Hours
+        { get; private set; }
         public ObservableCollection<int> Minut { get; private set; }
 
         public virtual User AlarmUser
@@ -88,7 +89,7 @@ namespace Models
         {
             _guid = Guid.NewGuid();
             _beginTime = CountDate(hour,minutes);
-            _endTime=_beginTime.AddMinutes(2);
+            _endTime = DateTime.MinValue;
             _hour= hour;
             _minutes = minutes;
           

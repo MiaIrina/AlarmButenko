@@ -38,3 +38,5 @@ C:\Users\Iryna Butenko\source\repos\AlarmProjectButenko\Client\obj\Debug\Views\A
 C:\Users\Iryna Butenko\source\repos\AlarmProjectButenko\Client\obj\Debug\Views\AlarmsControl.baml
 C:\Users\Iryna Butenko\source\repos\AlarmProjectButenko\Client\obj\Debug\Views\AddAlarmControl.g.cs
 C:\Users\Iryna Butenko\source\repos\AlarmProjectButenko\Client\obj\Debug\Views\AddAlarmControl.baml
+C:\Users\Iryna Butenko\source\repos\AlarmProjectButenko\Client\obj\Debug\Views\MessageControl.g.cs
+C:\Users\Iryna Butenko\source\repos\AlarmProjectButenko\Client\obj\Debug\Views\MessageControl.baml

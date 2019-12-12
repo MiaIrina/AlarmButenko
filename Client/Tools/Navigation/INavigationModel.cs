@@ -12,7 +12,8 @@ namespace Client.Tools.Navigation
         Main,
         SignIn,
         Alarms,
-        CreateAlarm
+        CreateAlarm,
+        AlarmMessage
     }
 
     interface INavigationModel
