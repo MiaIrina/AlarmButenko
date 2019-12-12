@@ -33,6 +33,24 @@ namespace Client.ServiceAlarm {
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IAlarmService/AddAlarm", ReplyAction="http://tempuri.org/IAlarmService/AddAlarmResponse")]
         System.Threading.Tasks.Task AddAlarmAsync(Models.Alarm alarm);
         
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IAlarmService/UpdateAlarm", ReplyAction="http://tempuri.org/IAlarmService/UpdateAlarmResponse")]
+        void UpdateAlarm(Models.Alarm alarm, int h, int m);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IAlarmService/UpdateAlarm", ReplyAction="http://tempuri.org/IAlarmService/UpdateAlarmResponse")]
+        System.Threading.Tasks.Task UpdateAlarmAsync(Models.Alarm alarm, int h, int m);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IAlarmService/EndAlarm", ReplyAction="http://tempuri.org/IAlarmService/EndAlarmResponse")]
+        void EndAlarm(Models.Alarm alarm, System.DateTime end);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IAlarmService/EndAlarm", ReplyAction="http://tempuri.org/IAlarmService/EndAlarmResponse")]
+        System.Threading.Tasks.Task EndAlarmAsync(Models.Alarm alarm, System.DateTime end);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IAlarmService/UpdateAllAlarms", ReplyAction="http://tempuri.org/IAlarmService/UpdateAllAlarmsResponse")]
+        void UpdateAllAlarms();
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IAlarmService/UpdateAllAlarms", ReplyAction="http://tempuri.org/IAlarmService/UpdateAllAlarmsResponse")]
+        System.Threading.Tasks.Task UpdateAllAlarmsAsync();
+        
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IAlarmService/DeleteAlarm", ReplyAction="http://tempuri.org/IAlarmService/DeleteAlarmResponse")]
         void DeleteAlarm(Models.Alarm alarm);
         
@@ -101,6 +119,30 @@ namespace Client.ServiceAlarm {
         
         public System.Threading.Tasks.Task AddAlarmAsync(Models.Alarm alarm) {
             return base.Channel.AddAlarmAsync(alarm);
+        }
+        
+        public void UpdateAlarm(Models.Alarm alarm, int h, int m) {
+            base.Channel.UpdateAlarm(alarm, h, m);
+        }
+        
+        public System.Threading.Tasks.Task UpdateAlarmAsync(Models.Alarm alarm, int h, int m) {
+            return base.Channel.UpdateAlarmAsync(alarm, h, m);
+        }
+        
+        public void EndAlarm(Models.Alarm alarm, System.DateTime end) {
+            base.Channel.EndAlarm(alarm, end);
+        }
+        
+        public System.Threading.Tasks.Task EndAlarmAsync(Models.Alarm alarm, System.DateTime end) {
+            return base.Channel.EndAlarmAsync(alarm, end);
+        }
+        
+        public void UpdateAllAlarms() {
+            base.Channel.UpdateAllAlarms();
+        }
+        
+        public System.Threading.Tasks.Task UpdateAllAlarmsAsync() {
+            return base.Channel.UpdateAllAlarmsAsync();
         }
         
         public void DeleteAlarm(Models.Alarm alarm) {

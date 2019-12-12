@@ -5,7 +5,6 @@
       <xsd:import schemaLocation="http://localhost:54020/AlarmService.svc?xsd=xsd0" namespace="http://tempuri.org/" />
       <xsd:import schemaLocation="http://localhost:54020/AlarmService.svc?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
       <xsd:import schemaLocation="http://localhost:54020/AlarmService.svc?xsd=xsd2" namespace="http://schemas.datacontract.org/2004/07/Models" />
-      <xsd:import schemaLocation="http://localhost:54020/AlarmService.svc?xsd=xsd3" namespace="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
     </xsd:schema>
   </wsdl:types>
   <wsdl:message name="IAlarmService_UserExistsInDB_InputMessage">
@@ -25,6 +24,24 @@
   </wsdl:message>
   <wsdl:message name="IAlarmService_AddAlarm_OutputMessage">
     <wsdl:part name="parameters" element="tns:AddAlarmResponse" />
+  </wsdl:message>
+  <wsdl:message name="IAlarmService_UpdateAlarm_InputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateAlarm" />
+  </wsdl:message>
+  <wsdl:message name="IAlarmService_UpdateAlarm_OutputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateAlarmResponse" />
+  </wsdl:message>
+  <wsdl:message name="IAlarmService_EndAlarm_InputMessage">
+    <wsdl:part name="parameters" element="tns:EndAlarm" />
+  </wsdl:message>
+  <wsdl:message name="IAlarmService_EndAlarm_OutputMessage">
+    <wsdl:part name="parameters" element="tns:EndAlarmResponse" />
+  </wsdl:message>
+  <wsdl:message name="IAlarmService_UpdateAllAlarms_InputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateAllAlarms" />
+  </wsdl:message>
+  <wsdl:message name="IAlarmService_UpdateAllAlarms_OutputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateAllAlarmsResponse" />
   </wsdl:message>
   <wsdl:message name="IAlarmService_DeleteAlarm_InputMessage">
     <wsdl:part name="parameters" element="tns:DeleteAlarm" />
@@ -56,6 +73,18 @@
     <wsdl:operation name="AddAlarm">
       <wsdl:input wsaw:Action="http://tempuri.org/IAlarmService/AddAlarm" message="tns:IAlarmService_AddAlarm_InputMessage" />
       <wsdl:output wsaw:Action="http://tempuri.org/IAlarmService/AddAlarmResponse" message="tns:IAlarmService_AddAlarm_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdateAlarm">
+      <wsdl:input wsaw:Action="http://tempuri.org/IAlarmService/UpdateAlarm" message="tns:IAlarmService_UpdateAlarm_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IAlarmService/UpdateAlarmResponse" message="tns:IAlarmService_UpdateAlarm_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="EndAlarm">
+      <wsdl:input wsaw:Action="http://tempuri.org/IAlarmService/EndAlarm" message="tns:IAlarmService_EndAlarm_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IAlarmService/EndAlarmResponse" message="tns:IAlarmService_EndAlarm_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdateAllAlarms">
+      <wsdl:input wsaw:Action="http://tempuri.org/IAlarmService/UpdateAllAlarms" message="tns:IAlarmService_UpdateAllAlarms_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IAlarmService/UpdateAllAlarmsResponse" message="tns:IAlarmService_UpdateAllAlarms_OutputMessage" />
     </wsdl:operation>
     <wsdl:operation name="DeleteAlarm">
       <wsdl:input wsaw:Action="http://tempuri.org/IAlarmService/DeleteAlarm" message="tns:IAlarmService_DeleteAlarm_InputMessage" />
@@ -92,6 +121,33 @@
     </wsdl:operation>
     <wsdl:operation name="AddAlarm">
       <soap:operation soapAction="http://tempuri.org/IAlarmService/AddAlarm" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateAlarm">
+      <soap:operation soapAction="http://tempuri.org/IAlarmService/UpdateAlarm" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="EndAlarm">
+      <soap:operation soapAction="http://tempuri.org/IAlarmService/EndAlarm" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateAllAlarms">
+      <soap:operation soapAction="http://tempuri.org/IAlarmService/UpdateAllAlarms" style="document" />
       <wsdl:input>
         <soap:body use="literal" />
       </wsdl:input>

@@ -171,8 +171,7 @@ namespace Client.ViewModels
                 {
                     AlarmClient.Sample.AddUser(usertoAdd);
                     StationManager.Current = usertoAdd;
-                    Alarm toAdd = new Alarm(14, 34) { UserGuid= StationManager.Current.Guid };
-                    AlarmClient.Sample.AddAlarm(toAdd);
+     
                     MessageBox.Show($"Welcome {Name} !");
                     NavigationManager.Instance.Navigate(ViewType.Alarms);
                     

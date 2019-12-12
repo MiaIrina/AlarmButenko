@@ -4,7 +4,7 @@
 
 using Client.ServiceAlarm;
 using Models;
-
+using System;
 using System.Collections.Generic;
 
 namespace Client
@@ -51,6 +51,18 @@ namespace Client
         internal void AddAlarm(Alarm alarm)
         {
             ClientOfAlarm.AddAlarm(alarm);
+        }
+        internal void UpdateAlarm(Alarm alarm,int h,int m)
+        {
+            ClientOfAlarm.UpdateAlarm(alarm,h,m);
+        }
+        internal void UpdateAlarms()
+        {
+            ClientOfAlarm.UpdateAllAlarms();
+        }
+        internal void EndAlarm(Alarm alarm,DateTime time)
+        {
+            ClientOfAlarm.EndAlarm(alarm,time);
         }
         internal void DeleteAlarm(Alarm alarm)
         {

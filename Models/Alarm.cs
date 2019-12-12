@@ -74,7 +74,7 @@ namespace Models
             get { return _user; }
              set { _user = value; }
         }
-        private DateTime CountDate(int hour, int minutes)
+        public DateTime CountDate(int hour, int minutes)
         {
             DateTime today = DateTime.Now;
             DateTime res = new DateTime(today.Year,today.Month,today.Day,hour,minutes,0);

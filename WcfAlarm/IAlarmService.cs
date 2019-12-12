@@ -20,6 +20,12 @@ namespace WcfAlarm
         [OperationContract]
         void AddAlarm(Alarm alarm);
         [OperationContract]
+        void UpdateAlarm(Alarm alarm,int h,int m);
+        [OperationContract]
+        void EndAlarm(Alarm alarm,DateTime end);
+        [OperationContract]
+        void UpdateAllAlarms();
+        [OperationContract]
         void DeleteAlarm(Alarm alarm);
         [OperationContract]
         User GetUser(string login);

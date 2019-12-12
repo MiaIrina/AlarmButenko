@@ -46,6 +46,33 @@ namespace AlarmEntityFramework
                 context.SaveChanges();
             }
         }
+        public static void UpdateAlarm(Alarm alarm,int h,int m)
+        {
+            using (var context = new AlarmDBContext())
+            {
+
+                if (context.Alarms.Any(u => u.Hour == h && u.Minutes == m&&u.Guid!=alarm.Guid))
+                {
+                    throw new Exception("This alarm is already exists!");
+                }
+                Alarm al=context.Alarms.Where(u => u.Guid == alarm.Guid).First();
+                al.Hour = h;
+                al.Minutes = m;
+                context.SaveChanges();
+            }
+        }
+        public static void UpdateAlarms()
+        {
+            using (var context = new AlarmDBContext())
+            {
+
+              foreach (Alarm al in context.Alarms)
+                {
+                    al.BeginTime = al.CountDate(al.Hour,al.Minutes);
+                }
+                context.SaveChanges();
+            }
+        }
         public static void SaveAlarm(Alarm alarm)
         {
             using (var context = new AlarmDBContext())
@@ -70,6 +97,20 @@ namespace AlarmEntityFramework
             using (var context = new AlarmDBContext())
             {
                 return context.Alarms.Where(r => r.UserGuid == guid).ToList();
+            }
+        }
+        public static void EndAlarm(Alarm alarm, DateTime end)
+        {
+            using (var context = new AlarmDBContext())
+            {
+
+               
+                Alarm al = context.Alarms.Where(u => u.Guid == alarm.Guid).First();
+                if (al != null)
+                {
+                    al.EndTime = end;
+                }
+                context.SaveChanges();
             }
         }
 

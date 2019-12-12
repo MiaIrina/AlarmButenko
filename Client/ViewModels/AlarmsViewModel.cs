@@ -47,7 +47,7 @@ namespace Client.ViewModels
                 List<Alarm> alarms = AlarmClient.Sample.GetAlarms(StationManager.Current).ToList();
                 foreach (var alarm in alarms)
                 {
-                    if (alarm.BeginTime.ToShortTimeString() == DateTime.Now.ToShortTimeString())
+                    if (alarm.BeginTime.ToShortTimeString() == DateTime.Now.ToShortTimeString()&&alarm.BeginTime!=alarm.EndTime)
                     {
                         if (Application.Current.Dispatcher != null)
                         {
@@ -55,6 +55,7 @@ namespace Client.ViewModels
                             {
                                 _tokenSource.Cancel();
                                 _workingThread.Abort();
+                                AlarmClient.Sample.EndAlarm(alarm, alarm.BeginTime);
                                 NavigationManager.Instance.Navigate(ViewType.AlarmMessage);
                                 MessageViewModel.StartWorkingThread();                   
                             }));
@@ -63,6 +64,8 @@ namespace Client.ViewModels
                     if (_token.IsCancellationRequested)
                         break;
                 }
+
+                AlarmClient.Sample.UpdateAlarms();
             }
         }
 
@@ -202,6 +205,7 @@ namespace Client.ViewModels
         }
         public AlarmsViewModel()
         {
+            AlarmClient.Sample.UpdateAlarms();
             StartWorkingThread();
            Alarms = new ObservableCollection<Alarm>(AlarmClient.Sample.GetAlarms(StationManager.Current));
           

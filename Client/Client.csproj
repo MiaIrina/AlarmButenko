@@ -176,9 +176,6 @@
     <None Include="Connected Services\ServiceAlarm\AlarmService2.xsd">
       <SubType>Designer</SubType>
     </None>
-    <None Include="Connected Services\ServiceAlarm\AlarmService3.xsd">
-      <SubType>Designer</SubType>
-    </None>
     <None Include="packages.config" />
     <None Include="Properties\DataSources\Models.Alarm.datasource" />
     <None Include="Properties\DataSources\Models.User.datasource" />

@@ -1,5 +1,6 @@
 ﻿using AlarmEntityFramework;
 using Models;
+using System;
 using System.Collections.Generic;
 
 
@@ -24,7 +25,10 @@ namespace WcfAlarm
             AlarmEntWrapper.DeleteAlarm(alarm);
         }
 
-
+        public void EndAlarm(Alarm alarm, DateTime end)
+        {
+            AlarmEntWrapper.EndAlarm(alarm, end);
+        }
 
         public IEnumerable<Alarm> GetAlarms(User user)
         {
@@ -34,6 +38,16 @@ namespace WcfAlarm
         public User GetUser(string login)
         {
             return AlarmEntWrapper.UserByLogin(login);
+        }
+
+        public void UpdateAlarm(Alarm alarm,int h, int m)
+        {
+            AlarmEntWrapper.UpdateAlarm(alarm, h, m);
+        }
+
+        public void UpdateAllAlarms()
+        {
+            AlarmEntWrapper.UpdateAlarms();
         }
 
         public bool UserExistsInDB(User user)
